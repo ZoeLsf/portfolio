@@ -1,0 +1,193 @@
+/**
+*   GENERAL
+**/
+
+a
+{
+    color: black;
+    text-decoration: none;
+}
+
+/**
+*   HEADER
+**/
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    font-family: sofia-pro, sans-serif;
+    position: relative
+}
+
+.mail
+{
+    transform-origin: bottom left;
+    transform: rotate(90deg);
+    display: flex;
+    z-index: 100;
+    cursor: none;
+}
+
+.mail a
+{
+    transform-origin: center;
+    transform: rotate(180deg);
+    font-size: 25px;
+    cursor: default;
+    cursor: none;
+}
+
+@media screen and (max-width: 1100px)
+{
+    .mail span
+    {
+        font-size: 20px;
+    }
+}
+
+.hello
+{
+    font-size: 25px;
+}
+
+/*
+**  TEXTS
+*/
+
+.presentation_text
+{
+    font-family: acumin-pro, sans-serif;
+    font-size: 40px;
+    width: 50%;
+    margin-top: 8%;
+    margin-left: 5%;
+}
+
+@media screen and (max-width: 1100px)
+{
+    .presentation_text
+    {
+        font-size: 30px;
+        margin-left: 10%;
+        width: 70%;
+    }
+    
+}
+
+/*
+**  ILLUSTRATION
+*/
+
+.image_profil
+{
+    position: absolute; 
+    top: 0;
+    right: 10%;
+    width: 30%;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1100px)
+{
+    .image_profil 
+    {
+        top: 100%;
+        right: 35%;
+    }
+}
+
+
+/*
+**  INTERNSHIP INFORMATIONS
+*/
+
+.information
+{
+    margin-top: 5%;
+    display: flex;
+    width: 100%;
+    margin-left: 5%;
+}
+
+.internship_text_block
+{
+    width: 25%;
+    font-family: acumin-pro, sans-serif; 
+    margin-top: 40px;
+    padding-right: 32px;
+}
+
+.internship_text_block h3
+{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.internship_text_block p
+{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+}
+
+@media screen and (max-width: 1100px)
+{
+    .information_internship
+    {
+        display: none;
+    }
+}
+
+/*
+**  BUTTON
+*/
+
+.button
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    position: relative;
+}
+
+.button_projects 
+{
+    font-family: acumin-pro, sans-serif;
+    font-size: 20px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.button_border
+{
+    position: absolute;
+    top: -40%;
+    stroke-dasharray: 620,620;
+    stroke-dashoffset: 0;
+}
+
+.button_animation
+{
+    animation: animation-button 2s ease-in-out;
+}
+
+@keyframes animation-button
+{
+    0%
+    {
+        stroke-dashoffset: 1240;
+    }
+}
+
+
+@media screen and (max-width: 1100px)
+{
+    .button
+    {
+        margin-top: 45%;
+    }
+}

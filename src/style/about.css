@@ -1,0 +1,159 @@
+/**
+*   GENERAL
+**/
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+/**
+*   MAIN CONTENT
+**/
+
+.header_bloc_about
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.hello_title
+{
+    font-family: sofia-pro, sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+    margin-bottom: 0px;
+}
+
+.text_about
+{
+    width: 40%;
+    margin-top: 0;
+}
+
+.text_about p
+{
+    font-family: acumin-pro, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 28px;
+    margin-top: 12%;
+}
+
+.text_about a
+{
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1000px)
+{
+    .text_about
+    {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 800px)
+{
+    .text_about
+    {
+        width: 100%;
+    }
+}
+
+
+/**
+*   MENU
+**/
+
+.menu_page .opacity
+{
+    opacity: 50%;
+}
+
+/**
+*   IMAGE
+**/
+
+.image_perso
+{
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+}
+
+@media screen and (max-width: 1000px)
+{
+    .image_perso
+    {
+        right: 5%;
+        top: 30%;
+    }
+}
+
+@media screen and (max-width: 800px)
+{
+    .image_perso
+    {
+        display: none;
+    }
+}
+
+
+/*
+** SOCIAL NETWORKS 
+*/
+
+@media screen and (min-width: 1250px)
+{
+    .social_networks_about
+    {
+        display: flex;
+        width: 15%;
+        justify-content: space-between;
+        font-size: 20px;
+        position: absolute;
+        bottom: 10%;
+    }
+
+    .social_networks_about span
+    {
+        opacity: 50%;
+        font-family: sofia-pro, sans-serif;
+        margin-top: 40%;
+    }
+}
+
+@media screen and (max-width: 1300px)
+{
+    .social_networks_about
+    {
+        display: flex;
+        width: 15%;
+        justify-content: space-between;
+        font-size: 20px;
+        position: absolute;
+        bottom: 10%;
+    }
+
+    .social_networks_about span
+    {
+        opacity: 50%;
+        font-family: sofia-pro, sans-serif;
+        margin-top: 40%;
+    }
+
+}
+
+@media screen and (max-width: 1100px)
+{
+    .social_networks_about
+    {
+        width: 20%;
+    }
+}

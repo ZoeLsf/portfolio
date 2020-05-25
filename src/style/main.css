@@ -1,0 +1,347 @@
+/**
+*   VARIABLES
+**/
+
+element
+{
+    --font-sofia : sofia-pro, sans-serif;
+    --sofia-light : 300;
+}
+
+/**
+*   GENERAL
+**/
+
+body
+{
+    margin: 0 auto;
+    cursor: none;
+}
+
+.project_container
+{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+/**
+*   CURSOR
+**/
+
+.cursor
+{
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+.cursor svg
+{
+    position: absolute;
+    z-index: 10000;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 415;
+    position: absolute;
+    z-index: 100;
+}
+
+.cursor_pointer
+{
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: black;
+    position: absolute;
+    pointer-events: none;
+}
+
+
+.animation
+{
+    animation: animation-cursor 10s ease forwards;
+}
+
+@keyframes animation-cursor
+{
+    0%
+    {
+        stroke-dasharray: 415;
+        stroke-dashoffset: 0;
+    }
+    100%
+    {
+        stroke-dasharray: 415;
+        stroke-dashoffset: -415;
+    } 
+}
+
+/**
+*   MENU
+**/
+
+.menu
+{
+    position: relative;
+    display: flex;
+    transform-origin: bottom left;
+    transform: rotate(90deg);
+    z-index:100;
+    width: 40%;
+}
+
+.menu h2
+{
+    margin: 0;
+    padding-right: 30px;
+    transform-origin: center;
+    transform: rotate(180deg);
+    font-family: sofia-pro, sans-serif;
+    font-weight: var(--sofia-light);
+}
+
+
+.opacity
+{
+    opacity: 0.5;
+}
+
+.menu h2:hover
+{
+    opacity: 100%;
+}
+
+
+/**
+*   PROJECT'S PRESENTATION
+**/
+
+@media screen and (min-width: 1100px)
+{
+    .main_project
+    {
+        position: relative;
+        padding-right: 10%;
+        padding-left: 10%;
+        margin: auto;
+    }
+
+    .main_project .image_slider
+    {
+        width: 600px;
+    }
+}
+
+
+@media screen and (max-width: 1100px)
+{
+    .main_project
+    {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* .main_project_container
+    {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top: 2%;
+    } */
+
+    
+    .main_project .img_slider
+    {
+        width: 600px;
+        margin: 0;
+    }
+}
+
+/* Title Bloc */
+
+@media screen and (min-width: 1100px)
+{
+    .main_project .title_project
+    {
+        position: absolute; 
+        top: 40%;
+        left: 40%;
+        font-family: sofia-pro, sans-serif;
+        font-weight: var(--sofia-light);
+    }
+
+    .main_project .title_project_bloc
+    {
+        position: relative; 
+    }
+
+    .main_project .project_name
+    { 
+        font-family: sofia-pro, sans-serif;
+        font-weight: var(--sofia-light);
+        font-size: 8em;
+        margin: 0;
+    }
+
+    .main_project .project_date
+    { 
+        position: absolute;
+        right: 4%;
+        top: 20px;
+        font-family: sofia-pro, sans-serif;
+        font-weight: var(--sofia-light);
+        font-size: 1.2em;
+        margin: 0;
+        z-index: 1;
+    }
+    
+    /* Project ID */
+
+    .main_project .project_id
+    {
+        font-family: sofia-pro, sans-serif;
+        font-weight: var(--sofia-light);
+        font-size: 40px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+
+
+@media screen and (max-width: 1100px)
+{
+    .main_project .title_project
+    {
+        position: absolute; 
+        bottom: -5%;
+        font-family: sofia-pro, sans-serif;
+        font-weight: var(--sofia-light);
+    }
+
+    .main_project .title_project_bloc
+    {
+        position: relative; 
+    }
+
+    .main_project .project_name
+    { 
+        font-family: sofia-pro, sans-serif;
+        font-weight: var(--sofia-light);
+        font-size: 8em;
+        margin: 0;
+    }
+
+    .main_project .project_date
+    { 
+        position: absolute;
+        right: 0%;
+        top: 20px;
+        font-family: sofia-pro, sans-serif;
+        font-weight: var(--sofia-light);
+        font-size: 1.2em;
+        margin: 0;
+        z-index: 1;
+    }
+    
+    /* Project ID */
+
+    .main_project .project_id
+    {
+        font-family: sofia-pro, sans-serif;
+        font-weight: var(--sofia-light);
+        font-size: 40px;
+        position: absolute;
+        right: 0%;
+        bottom: -1%;
+    }
+}
+
+/*
+** SOCIAL BAR
+*/
+
+@media screen and (min-width: 1250px)
+{
+    .social_networks
+    {
+        display: flex;
+        width: 15%;
+        justify-content: space-between;
+        font-size: 20px;
+        position: absolute;
+        bottom: 10%;
+    }
+
+    .social_networks .social
+    {
+        opacity: 50%;
+        font-family: sofia-pro, sans-serif;
+        margin-top: 40%;
+    }
+
+    .social:hover
+    {
+        opacity: 100%;
+    }
+}
+
+@media screen and (max-width: 1300px)
+{
+    .social_networks
+    {
+        display: flex;
+        width: 15%;
+        justify-content: space-between;
+        font-size: 20px;
+        position: absolute;
+        bottom: 10%;
+    }
+
+    .social_networks .social
+    {
+        opacity: 50%;
+        font-family: sofia-pro, sans-serif;
+        margin-top: 40%;
+    }
+
+    .social:hover
+    {
+        opacity: 100%;
+    }
+
+}
+
+@media screen and (max-width: 1100px)
+{
+    .social_networks
+    {
+        display: flex;
+        width: 10%;
+        justify-content: space-between;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 20px;
+        padding-bottom: 20px;
+        position: absolute;
+        bottom: 10%;
+    }
+
+    .social_networks .social
+    {
+        opacity: 50%;
+        font-family: sofia-pro, sans-serif;
+        margin-top: 10%;
+    }
+
+    .social:hover
+    {
+        opacity: 100%;
+    }
+
+}

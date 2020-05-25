@@ -1,0 +1,196 @@
+/**
+*   VARIABLES
+**/
+
+element
+{
+    --font-sofia : sofia-pro, sans-serif;
+    --sofia-light : 300;
+    --font-acumin: acumin-pro, sans-serif;
+    --acumin-light : 300;
+    --acumin-semibold : 600;
+}
+
+/**
+* CONTAINER
+**/
+
+
+/**
+* HEADER BLOC
+**/
+
+.header_bloc
+{
+    padding-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* TITLE */
+
+.project_title
+{
+    font-family: sofia-pro, sans-serif;
+    font-weight: var(--sofia-light);
+    font-size: 9em;
+    margin: 0;
+}
+
+/* MENU */
+
+.menu_page
+{
+    position: fixed;
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+    right: 5%;
+    /*position: fixed;*/
+}
+
+.menu_page h2
+{
+    font-family: sofia-pro, sans-serif;
+    font-weight: var(--sofia-light); 
+    padding-left: 20px;
+
+}
+
+
+a
+{
+    color: black;
+    text-decoration: none;
+}
+
+/**
+*   PROJECT INFORMATIONS
+**/
+
+.information_project
+{
+    width: 100%;
+    display: flex;
+}
+
+.project_text_bloc
+{
+    width: 28%;
+    font-family: acumin-pro, sans-serif; 
+    margin-top: 40px;
+    padding-right: 32px;
+}
+
+.project_text_bloc h3
+{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.project_text_bloc span
+{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/**
+*   INTRODUCTION PROJECT 
+**/
+
+.introduction_project
+{
+    margin-top: 100px;
+    display: flex;
+}
+
+.project_text_bloc p
+{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+}
+
+.hidden
+{
+    visibility: hidden;
+}
+
+/**
+*   IMAGES 
+**/ 
+
+.first_image
+{
+    margin-top: 50px;
+    width: 100%;
+    height: 490px;
+    background-color: #FFFCC1;
+}
+
+.image_banniere
+{
+    width: 100%;
+    margin-top: 50px;
+}
+
+.image_project
+{
+    width: 100%;
+    margin-top: 100px;
+}
+
+.two_images_bloc, .three_images_bloc
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.two_images_bloc img
+{
+    width: 49%;
+    height: auto;
+}
+
+.three_images_bloc img
+{
+    width: 32%;
+}
+
+/**
+*   CREDIT
+**/
+
+
+.credit_project
+{
+    margin-top: 100px;
+    display: flex;
+}
+
+.credit_project .project_text_block
+{
+    width: 0%;
+}
+
+
+
+/**
+*   FOOTER
+**/
+
+.next_project 
+{
+    font-family: sofia pro, sans-serif;
+    font-size: 7em;
+    font-weight: 300;
+    margin-top: 200px;
+}
+
+
+
