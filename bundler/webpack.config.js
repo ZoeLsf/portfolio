@@ -9,9 +9,10 @@ module.exports =
     entry: 
     {
         index: path.resolve(__dirname, '../src/index.js'),
-        page: path.resolve(__dirname, '../src/page.js'),
+        page: path.resolve(__dirname, '../src/slider.js'),
         intro: path.resolve(__dirname, '../src/intro.js'),
-        about: path.resolve(__dirname, '../src/about.js')
+        about: path.resolve(__dirname, '../src/about.js'),
+        
     },
     devtool: 'source-map',
     devServer: 

@@ -1,4 +1,6 @@
 import './style/pages.css'
+import gsap from 'gsap';
+
 
 // ENTER PROJECT
 
@@ -43,4 +45,19 @@ imageProjectElement.addEventListener('click', ()=>
     document.location.href = './dev_page.html'
   else if (document.location.href == 'http://192.168.0.23:8080/illus.html')
     document.location.href = './illus_page.html'
+})
+
+// ANIMATION IMAGE
+
+const imageElement = document.querySelector('.js_image_slider')
+const projectDateElement = document.querySelector('.js_project_date')
+
+imageElement.addEventListener('mouseenter', ()=>
+{
+  gsap.to(imageElement, {scale: 1.1, duration: 0.5})
+})
+
+imageElement.addEventListener('mouseleave', ()=>
+{
+  gsap.to(imageElement, {scale: 1, duration: 1})
 })
