@@ -8,6 +8,7 @@ a
     color: black;
 }
 
+
 /**
 *   MAIN CONTENT
 **/
@@ -72,6 +73,11 @@ a
 .menu_page .opacity
 {
     opacity: 50%;
+}
+
+.menu_page_work:hover
+{
+    opacity: 100%;
 }
 
 /**

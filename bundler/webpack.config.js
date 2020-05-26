@@ -9,9 +9,10 @@ module.exports =
     entry: 
     {
         index: path.resolve(__dirname, '../src/index.js'),
-        page: path.resolve(__dirname, '../src/slider.js'),
+        slider: path.resolve(__dirname, '../src/slider.js'),
         intro: path.resolve(__dirname, '../src/intro.js'),
         about: path.resolve(__dirname, '../src/about.js'),
+        pages: path.resolve(__dirname, '../src/pages.js'),
         
     },
     devtool: 'source-map',
@@ -39,61 +40,61 @@ module.exports =
         ({
             filename: 'sun.html',
             template: path.resolve(__dirname, '../src/sun.html'),
-            chunks: ['index', 'page']
+            chunks: ['index', 'slider']
         }),
         new htmlWebpackPlugin
         ({
             filename: 'arty.html',
             template: path.resolve(__dirname, '../src/arty.html'),
-            chunks: ['index', 'page']
+            chunks: ['index', 'slider']
         }),
         new htmlWebpackPlugin
         ({
             filename: 'dev.html',
             template: path.resolve(__dirname, '../src/dev.html'),
-            chunks: ['index', 'page']
+            chunks: ['index', 'slider']
         }),
         new htmlWebpackPlugin
         ({
             filename: 'atomium_page.html',
             template: path.resolve(__dirname, '../src/projects/atomium_page.html'),
-            chunks: ['index', 'page']
+            chunks: ['index', 'pages']
         }),
         new htmlWebpackPlugin
         ({
             filename: 'illus.html',
             template: path.resolve(__dirname, '../src/illus.html'),
-            chunks: ['index', 'page']
+            chunks: ['index', 'slider']
         }),
         new htmlWebpackPlugin
         ({
             filename: 'arty_page.html',
             template: path.resolve(__dirname, '../src/projects/arty_page.html'),
-            chunks: ['index', 'page']
+            chunks: ['index', 'pages']
         }),
         new htmlWebpackPlugin
         ({
             filename: 'sun_page.html',
             template: path.resolve(__dirname, '../src/projects/sun_page.html'),
-            chunks: ['index', 'page']
+            chunks: ['index', 'pages']
         }),
         new htmlWebpackPlugin
         ({
             filename: 'dev_page.html',
             template: path.resolve(__dirname, '../src/projects/dev_page.html'),
-            chunks: ['index', 'page']
+            chunks: ['index', 'pages']
         }),
         new htmlWebpackPlugin
         ({
             filename: 'illus_page.html',
             template: path.resolve(__dirname, '../src/projects/illus_page.html'),
-            chunks: ['index', 'page']
+            chunks: ['index', 'pages']
         }),
         new htmlWebpackPlugin
         ({
             filename: 'atomium.html',
             template: path.resolve(__dirname, '../src/atomium.html'),
-            chunks: ['index', 'page']
+            chunks: ['index', 'slider']
         }),
         new htmlWebpackPlugin
         ({

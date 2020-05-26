@@ -4,7 +4,13 @@ import barba from '@barba/core';
 import gsap from 'gsap';
 
 
-
+const cursor =
+    {
+        x:0,
+        y:0,
+        scrollY: 0,
+        lastScrollY: 0
+    }
 
 // CURSOR
 
@@ -14,21 +20,26 @@ const cursorPointerElement = document.querySelector('.cursor_pointer')
 document.addEventListener('mousemove', (_event)=>
 {
 
-  // UPDATE CURSOR CIRCLE COORD 
-  var cursorElementX = _event.clientX -25
-  var cursorElementY = _event.clientY - 25
-  
-
-  gsap.to(cursorElement, { ease: "Power1.easeOut", x: cursorElementX+'px', y: cursorElementY+'px' })
+  // UPDATE CURSOR CIRCLE COORD
+    cursor.x = _event.clientX
+    cursor.y = _event.clientY + cursor.scrollY
+  gsap.to(cursorElement, { ease: "Power1.easeOut", x: cursor.x -25+'px', y: cursor.y - 25+'px' })
 
   // UPDATE CURSOR POINTER COORD
-  var cursorPointerElementX = _event.clientX - 5
-  var cursorPointerElementY = _event.clientY - 5
 
-  cursorPointerElement.style.top = cursorPointerElementY + 'px'
-  cursorPointerElement.style.left = cursorPointerElementX + 'px'
+  cursorPointerElement.style.top = cursor.y -5 + 'px'
+  cursorPointerElement.style.left = cursor.x-5 + 'px'
 })
 
+document.addEventListener('scroll', (_event)=>
+    {
+        cursor.y = cursor.y  + (window.pageYOffset - cursor.scrollY)
+        cursor.scrollY = window.pageYOffset
+        gsap.to(cursorElement, { ease: "Power1.easeOut", x: cursor.x -25+'px', y: cursor.y -25+'px' })
+        cursorPointerElement.style.top = cursor.y -5 + 'px'
+        cursorPointerElement.style.left = cursor.x -5 + 'px'
+    }
+);
 
 
 
@@ -119,8 +130,3 @@ document.addEventListener('wheel', function(_e)
     }
   }
 })
-
-
-
-
-

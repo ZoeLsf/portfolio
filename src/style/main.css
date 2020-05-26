@@ -34,6 +34,10 @@ body
     position: absolute; 
     top: 0;
     left: 0;
+    display: flex;
+    width: 50px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cursor svg
@@ -119,21 +123,20 @@ body
 *   PROJECT'S PRESENTATION
 **/
 
-@media screen and (min-width: 1100px)
-{
-    .main_project
-    {
-        position: relative;
-        padding-right: 10%;
-        padding-left: 10%;
-        margin: auto;
-    }
 
-    .main_project .image_slider
-    {
-        width: 600px;
-    }
+.main_project
+{
+    position: relative;
+    padding-right: 10%;
+    padding-left: 10%;
+    margin: auto;
 }
+
+.main_project .image_slider
+{
+    width: 600px;
+}
+
 
 
 @media screen and (max-width: 1100px)
@@ -144,15 +147,6 @@ body
         display: flex;
         justify-content: center;
     }
-
-    /* .main_project_container
-    {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        margin-top: 2%;
-    } */
-
     
     .main_project .img_slider
     {
@@ -163,54 +157,75 @@ body
 
 /* Title Bloc */
 
-@media screen and (min-width: 1100px)
+.main_project .title_project
+{
+    position: absolute; 
+    top: 40%;
+    left: 40%;
+    font-family: sofia-pro, sans-serif;
+    font-weight: var(--sofia-light);
+}
+
+@media screen and (max-width: 1100px)
 {
     .main_project .title_project
     {
-        position: absolute; 
-        top: 40%;
-        left: 40%;
-        font-family: sofia-pro, sans-serif;
-        font-weight: var(--sofia-light);
-    }
-
-    .main_project .title_project_bloc
-    {
-        position: relative; 
-    }
-
-    .main_project .project_name
-    { 
-        font-family: sofia-pro, sans-serif;
-        font-weight: var(--sofia-light);
-        font-size: 8em;
-        margin: 0;
-    }
-
-    .main_project .project_date
-    { 
-        position: absolute;
-        right: 4%;
-        top: 20px;
-        font-family: sofia-pro, sans-serif;
-        font-weight: var(--sofia-light);
-        font-size: 1.2em;
-        margin: 0;
-        z-index: 1;
-    }
-    
-    /* Project ID */
-
-    .main_project .project_id
-    {
-        font-family: sofia-pro, sans-serif;
-        font-weight: var(--sofia-light);
-        font-size: 40px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
+        top: 80%;
+        left: 15%;
     }
 }
+
+.main_project .title_project_bloc
+{
+    position: relative; 
+}
+
+.main_project .project_name
+{ 
+    font-family: sofia-pro, sans-serif;
+    font-weight: var(--sofia-light);
+    font-size: 8em;
+    margin: 0;
+}
+
+.main_project .project_date
+{ 
+    position: absolute;
+    right: 0%;
+    top: 20px;
+    font-family: sofia-pro, sans-serif;
+    font-weight: var(--sofia-light);
+    font-size: 1.2em;
+    margin: 0;
+    z-index: 1;
+    display: block;
+}
+
+.main_project .project_click
+{
+    position: absolute;
+    right: 0%;
+    top: 20px;
+    font-family: sofia-pro, sans-serif;
+    font-weight: var(--sofia-light);
+    font-size: 1.2em;
+    margin: 0;
+    z-index: 1;
+    display: none;
+}
+    
+/* Project ID */
+
+.main_project .project_id
+{
+    font-family: sofia-pro, sans-serif;
+    font-weight: var(--sofia-light);
+    font-size: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
 
 
 
@@ -263,85 +278,100 @@ body
 }
 
 /*
-** SOCIAL BAR
+**  FOOTER
 */
 
-@media screen and (min-width: 1250px)
+.footer
 {
-    .social_networks
-    {
-        display: flex;
-        width: 15%;
-        justify-content: space-between;
-        font-size: 20px;
-        position: absolute;
-        bottom: 10%;
-    }
-
-    .social_networks .social
-    {
-        opacity: 50%;
-        font-family: sofia-pro, sans-serif;
-        margin-top: 40%;
-    }
-
-    .social:hover
-    {
-        opacity: 100%;
-    }
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 40px;
 }
 
-@media screen and (max-width: 1300px)
+
+/* SOCIAL BAR */
+
+
+.social_networks
 {
-    .social_networks
-    {
-        display: flex;
-        width: 15%;
-        justify-content: space-between;
-        font-size: 20px;
-        position: absolute;
-        bottom: 10%;
-    }
-
-    .social_networks .social
-    {
-        opacity: 50%;
-        font-family: sofia-pro, sans-serif;
-        margin-top: 40%;
-    }
-
-    .social:hover
-    {
-        opacity: 100%;
-    }
-
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+    font-size: 20px;
 }
+
+.social_networks .social
+{
+    opacity: 50%;
+    font-family: sofia-pro, sans-serif;
+}
+
+.social:hover
+{
+    opacity: 100%;
+}
+
 
 @media screen and (max-width: 1100px)
 {
     .social_networks
     {
-        display: flex;
         width: 10%;
-        justify-content: space-between;
         flex-direction: column;
         justify-content: space-around;
-        font-size: 20px;
+        align-items: flex-start;
         padding-bottom: 20px;
-        position: absolute;
-        bottom: 10%;
+        margin-top: -12%;
     }
 
     .social_networks .social
     {
-        opacity: 50%;
-        font-family: sofia-pro, sans-serif;
         margin-top: 10%;
     }
 
-    .social:hover
-    {
-        opacity: 100%;
-    }
-
 }
+
+/* ARROWS */
+
+.arrows
+{
+    width: 8%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrows img
+{
+    width: 30px;
+    height: 30px;
+    opacity: 50%;
+}
+
+.arrows img:hover
+{
+    opacity: 100%;
+}
+
+.forward_arrow
+{
+    width: 8%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.forward_arrow img
+{
+    width: 30px;
+    height: 30px;
+    opacity: 50%;
+}
+
+.forward_arrow img:hover
+{
+    opacity: 100%;
+}
+

@@ -56,7 +56,16 @@ element
     font-family: sofia-pro, sans-serif;
     font-weight: var(--sofia-light); 
     padding-left: 20px;
+}
 
+.menu_page_work:hover
+{
+    opacity: 100%;
+}
+
+.menu_page_info:hover
+{
+    opacity: 100%;
 }
 
 
@@ -64,6 +73,7 @@ a
 {
     color: black;
     text-decoration: none;
+    cursor: none;
 }
 
 /**
@@ -186,11 +196,31 @@ a
 
 .next_project 
 {
+    
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.next_project .next_project_text
+{
     font-family: sofia pro, sans-serif;
     font-size: 7em;
     font-weight: 300;
-    margin-top: 200px;
 }
 
+.next_project .click
+{
+    font-family: acumin-pro, sans-serif;
+    padding-bottom: 20px;
+    display: none;
+}
+
+.cursor .clicker 
+{
+    font-family: acumin-pro, sans-serif;
+    margin-bottom: 100%;
+}
 
 
