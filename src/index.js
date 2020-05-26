@@ -3,7 +3,25 @@ import './style/main.css'
 import barba from '@barba/core';
 import gsap from 'gsap';
 
+const projectName = document.querySelector('.project_name')
 
+// BARBA TRANSITIONS 
+
+barba.init
+({
+  transitions:
+  [{
+    name: 'slider-transitions', 
+    beforeLeave()
+    {
+      gsap.to(projectName, {color: red, duration: 2})
+    }
+  }]
+})
+
+// CURSOR
+
+// Cursor initialization
 const cursor =
     {
         x:0,
@@ -12,11 +30,10 @@ const cursor =
         lastScrollY: 0
     }
 
-// CURSOR
-
 const cursorElement = document.querySelector('.cursor')
 const cursorPointerElement = document.querySelector('.cursor_pointer')
 
+// Cursor mouve with the mouse 
 document.addEventListener('mousemove', (_event)=>
 {
 
