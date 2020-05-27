@@ -1,23 +1,25 @@
 import './style/main.css'
-
-import barba from '@barba/core';
+import barba from '@barba/core'
+import router from '@barba/router'
 import gsap from 'gsap';
 
 const projectName = document.querySelector('.project_name')
 
-// BARBA TRANSITIONS 
-
-barba.init
-({
-  transitions:
-  [{
-    name: 'slider-transitions', 
-    beforeLeave()
-    {
-      gsap.to(projectName, {color: red, duration: 2})
-    }
-  }]
-})
+barba.init({
+    transitions: [{
+        name: 'default-transition',
+        leave(data) {
+            return gsap.to(data.current.container, {
+                opacity: 0
+            });
+        },
+        enter(data) {
+            return gsap.from(data.next.container, {
+                opacity: 0,delay : 4
+            });
+        }
+    }]
+});
 
 // CURSOR
 
