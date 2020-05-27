@@ -3,21 +3,8 @@ import './style/main.css'
 import barba from '@barba/core';
 import gsap from 'gsap';
 
-const projectName = document.querySelector('.project_name')
 
-// BARBA TRANSITIONS 
 
-barba.init
-({
-  transitions:
-  [{
-    name: 'slider-transitions', 
-    beforeLeave()
-    {
-      gsap.to(projectName, {color: red, duration: 2})
-    }
-  }]
-})
 
 // CURSOR
 
