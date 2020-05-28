@@ -1,3 +1,6 @@
+import './style/main.css'
+import './style/about.css'
+import './style/intro.css'
 import './style/pages.css'
 
 const nextProjectElement = document.querySelector('.js_next_project')
@@ -54,24 +57,24 @@ nextProjectElement.addEventListener('mouseleave', ()=>
 })
 
 
-// CLICK NEXT PROJECT 
+// // CLICK NEXT PROJECT 
 
-nextProjectElement.addEventListener('click', ()=>
-{
-  if(document.location.href == 'http://192.168.0.23:8080/atomium_page.html')
-  {
-    document.location.href = './sun_page.html'
-  }  
-  else if (document.location.href == 'http://192.168.0.23:8080/sun_page.html')
-  {
-    document.location.href = './arty_page.html'
-  }  
-  else if (document.location.href == 'http://192.168.0.23:8080/arty_page.html')
-  {
-    document.location.href = './dev_page.html'
-  }
-  else if (document.location.href == 'http://192.168.0.23:8080/dev_page.html')
-    document.location.href = './illus_page.html'
-  else if (document.location.href == 'http://192.168.0.23:8080/illus_page.html')
-    document.location.href = './about.html'
-})
+// nextProjectElement.addEventListener('click', ()=>
+// {
+//   if(document.location.href == 'http://192.168.0.23:8080/atomium_page.html')
+//   {
+//     document.location.href = './sun_page.html'
+//   }  
+//   else if (document.location.href == 'http://192.168.0.23:8080/sun_page.html')
+//   {
+//     document.location.href = './arty_page.html'
+//   }  
+//   else if (document.location.href == 'http://192.168.0.23:8080/arty_page.html')
+//   {
+//     document.location.href = './dev_page.html'
+//   }
+//   else if (document.location.href == 'http://192.168.0.23:8080/dev_page.html')
+//     document.location.href = './illus_page.html'
+//   else if (document.location.href == 'http://192.168.0.23:8080/illus_page.html')
+//     document.location.href = './about.html'
+// })

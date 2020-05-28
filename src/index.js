@@ -1,25 +1,76 @@
 import './style/main.css'
+import './style/about.css'
+import './style/intro.css'
+import './style/pages.css'
 import barba from '@barba/core'
-// import router from '@barba/router'
 import gsap from 'gsap';
 
+function delay(n) {
+  n = n || 2000
+  return new Promise ((done) => {
+    setTimeout(() => {
+      done()
+    }, n);
+  })
+}
+
+function pageTransition(){
+  var tl = gsap.timeline()
+  tl.to(".loading-screen", 
+  {
+    duration: 1.2, 
+    // height: "100vh",
+    // top: "0%",
+    width: "100%",
+    left: "0%",
+    ease: "Expo.easeInOut"
+  })
+
+  tl.to(".loading-screen", 
+  {
+    duration: 1, 
+    // height: "100vh",
+    // top: "100%",
+    width: "100%",
+    left: "100%",
+    ease: "Expo.easeInOut",
+    delay: 0.3,
+  })
+
+  tl.set("loading-screen", {
+    left: "-100%"
+    // top: "-100%"
+  })
+}
+
+function contentAnimationEnter(){
+  var tl = gsap.timeline()
+  tl.from(".animate_this", {duration: 1, y: 30, opacity: 0, stagger: 0.4, delay: 0.5})
+}
+
+function contentAnimationLeave(){
+  var tl = gsap.timeline()
+  tl.from(".animate_this", {duration: 1, y: -30, opacity: 0, stagger: 0.4, delay: 0.5})
+}
 
 barba.init({
     transitions: [{
         name: 'default-transition',
         leave(data) {
-            return gsap.to(data.current.container, {
-                opacity: 0
-            });
+          // const done = this.async()
+          contentAnimationLeave()
+
+          pageTransition()
+          // await delay(1000)
+          // done()
         },
         enter(data) {
-            return gsap.from(data.next.container, {
-                opacity: 0,delay : 4
-            });
+          contentAnimationEnter()
         }
+
+
     }]
 });
-
 // CURSOR
 
 // Cursor initialization
@@ -71,66 +122,16 @@ setTimeout(() => {
   scroll = true;
 }, 2000);
 
-// LINK OF THE ACTUAL PAGE 
-var documentLocation = document.location.href
-console.log(documentLocation)
-
 function redirectionNextPage ()
 {
-  if(documentLocation == 'http://192.168.0.23:8080/index.html' || documentLocation == 'http://192.168.0.23:8080/')
-  {
-    document.location.href = 'atomium.html'
-  }else 
-  if (documentLocation == 'http://192.168.0.23:8080/sun.html')
-  {
-    document.location.href = 'arty.html'
-  }else 
-  if (documentLocation == 'http://192.168.0.23:8080/arty.html')
-  {
-    document.location.href = 'dev.html'
-  }else 
-  if (documentLocation == 'http://192.168.0.23:8080/dev.html')
-  {
-    document.location.href = 'illus.html'
-  }else 
-  if (documentLocation == 'http://192.168.0.23:8080/atomium.html')
-  {
-    document.location.href = 'sun.html'
-  }
-  else 
-  if (documentLocation == 'http://192.168.0.23:8080/illus.html')
-  {
-    document.location.href = 'about.html'
-  }
+  
 }
 
 function redirectionPreviousPage ()
 {
-  if(documentLocation == 'http://192.168.0.23:8080/dev.html')
-  {
-    document.location.href = 'arty.html'
-  }else 
-  if (documentLocation == 'http://192.168.0.23:8080/sun.html')
-  {
-    document.location.href = 'atomium.html'
-  }else 
-  if (documentLocation == 'http://192.168.0.23:8080/arty.html')
-  {
-    document.location.href = 'sun.html'
-  }else 
-  if (documentLocation == 'http://192.168.0.23:8080/illus.html')
-  {
-    document.location.href = 'dev.html'
-  }else 
-  if (documentLocation == 'http://192.168.0.23:8080/atomium.html')
-  {
-    document.location.href = 'index.html'
-  }
-  if (documentLocation == 'http://192.168.0.23:8080/about.html')
-  {
-    document.location.href = 'illus.html'
-  }
+
 }
+
 
 
 document.addEventListener('wheel', function(_e)

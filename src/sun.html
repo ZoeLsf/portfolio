@@ -8,6 +8,10 @@
 </head>
 <body data-barba="wrapper">
     <div class="project_container">
+
+        <div class="load-container">
+            <div class="loading-screen"></div>
+        </div>
         
         <main data-barba="container" data-barba-namespace="sun">
 
@@ -19,10 +23,10 @@
 
             <!--Main bloc of projects presentation-->
             <div class="main_project">
-                <img src="/Images/sun.png" alt="Projet SUN" class="image_slider js_image_slider">
+                <a href="sun_page.html"><img src="/Images/sun.png" alt="Projet SUN" class="image_slider js_image_slider animate_this"></a>
 
                 <!-- Project's title bloc-->
-                <div class="title_project">
+                <div class="title_project animate_this">
                     <div class="title_project_bloc">
                         <span class="project_date js_project_date">2019</span>
                         <span class="project_click js_project_click">click to discover</span>
@@ -32,7 +36,7 @@
                 </div>
 
                 <!-- Project's ID bloc-->
-                <span class="project_id animation">#2</span>   
+                <span class="project_id animation animate_this">#2</span>   
             </div> 
             
             <footer class="footer">
@@ -47,11 +51,12 @@
 
                 <!-- ARROWS -->
                 <div class="arrows">
-                    <a href="atomium.html"><img src="/Images/arrow_back.png" alt="back"></a>
-                    <a href="arty.html"><img src="/Images/arrow_forward.png" alt="forward"></a>
+                    <a href="atomium.html"><img src="/Images/arrow_back.png" alt="back" class="js_back_arrow"></a>
+                    <a href="arty.html"><img src="/Images/arrow_forward.png" alt="forward" class="js_forward_arrow"></a>
                 </div>
             </footer>
 
+            
         </main> 
          <!-- CURSOR -->
         <div class="cursor">
@@ -62,7 +67,6 @@
         <div class="cursor_pointer"></div>
     </div>
 
-    <script src="page.js"></script>
 </body>
     
 </html>

@@ -6,9 +6,13 @@
     <link rel="stylesheet" href="https://use.typekit.net/ixk4hqa.css">
     <title>Portfolio</title>
 </head>
-<body data-barba="wrapper" class="scroll_hidden js_slider_page">
+<body data-barba="wrapper">
     <div class="project_container">
         
+        <div class="load-container">
+            <div class="loading-screen"></div>
+        </div>
+
         <main data-barba="container" data-barba-namespace="atomium">
 
             <!-- Vertical menu -->
@@ -19,7 +23,7 @@
 
             <!--Main bloc of projects presentation-->
             <div class="main_project">
-                <img src="/Images/atomium.png" alt="Projet Atomium" class="image_slider js_image_slider">
+                <a href="atomium_page.html"><img src="/Images/atomium.png" alt="Projet Atomium" class="image_slider js_image_slider animate_this"></a>
 
                 <!-- Project's title bloc-->
                 <div class="title_project animate_this">
@@ -33,7 +37,7 @@
                 
 
                 <!-- Project's ID bloc-->
-                <span class="project_id">#1</span>   
+                <span class="project_id animate_this">#1</span>   
             </div>  
 
             <footer class="footer">
@@ -47,8 +51,9 @@
                 </div>
 
                 <!-- ARROWS -->
-                <div class="forward_arrow">
-                    <a href="sun.html"><img src="/Images/arrow_forward.png" alt="forward"></a>
+                <div class="arrows">
+                    <a href="index.html"><img src="/Images/arrow_back.png" alt="back" class="js_back_arrow"></a>
+                    <a href="sun.html"><img src="/Images/arrow_forward.png" alt="forward" class="js_forward_arrow"></a>
                 </div>
             </footer>
             
